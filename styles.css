@@ -67,7 +67,7 @@ header > h1 {
 }
 
 .choices {
-    margin: 50px 0;
+    margin-top: 50px 0;
     text-align: center;
 }
 
@@ -85,7 +85,14 @@ header > h1 {
     cursor: pointer;
 }
 
-
+#action-message {
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
 
 
 
