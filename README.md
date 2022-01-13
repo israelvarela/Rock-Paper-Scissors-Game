@@ -20,7 +20,7 @@ Instrucions to Play
 
 Live Demo
 ----
-(https://israelvarela.github.io/Rock-Paper-Scissors-Game/)
+[Rock, Paper, Scissors!](https://israelvarela.github.io/Rock-Paper-Scissors-Game/)
 
 Getting Started
 ----
