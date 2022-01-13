@@ -8,6 +8,12 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
+function convertToWord(letter) {
+  if (letter === "r") return "Rock";
+  if (letter === "p") return "Paper";
+  return "Scissors";
+}
+
 function getComputerChoice() {
   const choices = ["r", "p", "s"];
   const randomNumber = Math.floor(Math.random() * 3);
@@ -15,19 +21,39 @@ function getComputerChoice() {
 }
 
 function win(playerChoice, compChoice) {
-    playerScore++;
-    playerScore_span.innerHTML = playerScore;
-    compScore_span.innerHTML = compScore;
-    
-    result_p.innerHTML = playerChoice + " beats " + compChoice + ". You win! 🔥"; 
+  playerScore++;
+  playerScore_span.innerHTML = playerScore;
+  compScore_span.innerHTML = compScore;
+  const smallPlayerWord = "player".fontsize(3).sub();
+  const smallCompWord = "comp".fontsize(3).sub();
+  result_p.innerHTML = `${convertToWord(
+    playerChoice
+  )}${smallPlayerWord} beats ${convertToWord(
+    compChoice
+  )}${smallCompWord}. You win! 😊`;
 }
 
-function lose() {
-    // compScore++;
+function lose(playerChoice, compChoice) {
+  compScore++;
+  playerScore_span.innerHTML = playerScore;
+  compScore_span.innerHTML = compScore;
+  const smallPlayerWord = "player".fontsize(3).sub();
+  const smallCompWord = "comp".fontsize(3).sub();
+  result_p.innerHTML = `${convertToWord(
+    playerChoice
+  )}${smallPlayerWord} loses to ${convertToWord(
+    compChoice
+  )}${smallCompWord}. You lost! 😡`;
 }
 
-function tie() {
-    console.log("tie");
+function tie(playerChoice, compChoice) {
+  const smallPlayerWord = "player".fontsize(3).sub();
+  const smallCompWord = "comp".fontsize(3).sub();
+  result_p.innerHTML = `${convertToWord(
+    playerChoice
+  )}${smallPlayerWord} equals ${convertToWord(
+    compChoice
+  )}${smallCompWord}. You tied! 🤬`;
 }
 
 function game(playerChoice) {
