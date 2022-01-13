@@ -1,9 +1,9 @@
-const playerScore = 0;
-const compScore = 0;
+let playerScore = 0;
+let compScore = 0;
 const playerScore_span = document.getElementById("player-score");
 const compScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
@@ -14,7 +14,21 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
+function win(playerChoice, compChoice) {
+    playerScore++;
+    playerScore_span.innerHTML = playerScore;
+    compScore_span.innerHTML = compScore;
+    
+    result_p.innerHTML = playerChoice + " beats " + compChoice + ". You win! 🔥"; 
+}
 
+function lose() {
+    // compScore++;
+}
+
+function tie() {
+    console.log("tie");
+}
 
 function game(playerChoice) {
   const compChoice = getComputerChoice();
@@ -22,17 +36,17 @@ function game(playerChoice) {
     case "rs":
     case "pr":
     case "sp":
-      win();
+      win(playerChoice, compChoice);
       break;
     case "rp":
     case "ps":
     case "sr":
-      lose();
+      lose(playerChoice, compChoice);
       break;
     case "rr":
     case "pp":
     case "ss":
-      tie();
+      tie(playerChoice, compChoice);
       break;
   }
 }
