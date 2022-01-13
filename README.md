@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors-Game
 -----
-https://user-images.githubusercontent.com/62815477/149411172-6ae95020-03f2-4c0a-86bf-a424be860f0b.png
+(https://user-images.githubusercontent.com/62815477/149411172-6ae95020-03f2-4c0a-86bf-a424be860f0b.png)
 
 Built With
 -----
