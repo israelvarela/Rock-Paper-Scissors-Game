@@ -1,6 +1,7 @@
 # Rock-Paper-Scissors-Game
 -----
-<img width="531" alt="Screen Shot 2022-01-13 at 2 20 25 PM" src="https://user-images.githubusercontent.com/62815477/149411172-6ae95020-03f2-4c0a-86bf-a424be860f0b.png">
+<img width="516" alt="Screen Shot 2022-01-13 at 3 30 23 PM" src="https://user-images.githubusercontent.com/62815477/149412156-15ee4110-2471-4cef-b5f1-5ef0d3e62674.png">
+
 
 
 Built With
